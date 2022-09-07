@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            position: relative; 
+        }
+        </style>
+    <title>site</title>
+</head>
+<body>
+    TOOLTIPS: <br>
+        üzerine gelince ne işe yaradığını gösteren buton:
+        <button type="button" class="btn btn-primary" data-bs-toggle="tooltip" title="Hooray!">
+          Hover over me!
+        </button><br>
+        sağ,aşağı,üst, sol yönlerde açılan buton:
+            <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Hooray!">Top</a>
+            <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Hooray!">Bottom</a>
+            <a href="#" data-bs-toggle="tooltip" data-bs-placement="left" title="Hooray!">Left</a>
+            <a href="#" data-bs-toggle="tooltip" data-bs-placement="right" title="Hooray!">Right</a><br>
+
+            POPOVER: <br>
+            butona basınca bir bilgilendirme sayfası açılıyor:
+            <button type="button" class="btn btn-primary" data-bs-toggle="popover" title="Popover Header" data-bs-content="Some content inside the popover">Toggle popover</button><br>
+            başka yönlere doğru aynı işlem:
+            <a href="#" title="Header" data-bs-toggle="popover" data-bs-placement="top" data-content="Content">Top</a>
+            <a href="#" title="Header" data-bs-toggle="popover" data-bs-placement="bottom" data-content="Content">Bottom</a>
+            <a href="#" title="Header" data-bs-toggle="popover" data-bs-placement="left" data-content="Content">Left</a>
+            <a href="#" title="Header" data-bs-toggle="popover" data-bs-placement="right" data-content="Content">Right</a><br>
+            üzerine gelince aynı işlemi yapıyor:
+            <a href="#" title="Header" data-bs-toggle="popover" data-bs-trigger="hover" data-bs-content="Popover text">Hover over me</a>
+<br>
+            TOST: <br>
+            isminden de anlaşılacağı üzere içerik arasına gizlenmiş bir içerik oluşturan kod:
+            <button type="button" class="btn btn-primary" id="toastbtn">Show Toast</button>
+            <div class="toast show">
+                <div class="toast-header">
+                  Toast Header
+                  <button type="button" class="btn-close" data-bs-dismiss="toast"></button>
+                </div>
+                <div class="toast-body">
+                  Some text inside the toast body
+                </div>
+              </div>
+
+
+              KAYDIRMA ÇUBUĞU CASUSU:
+              <body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+                  <div class="container-fluid">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#section1">Section 1</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#section2">Section 2</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#section3">Section 3</a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
+                
+                <div id="section1" class="container-fluid bg-success text-white" style="padding:100px 20px;">
+                  <h1>Section 1</h1>
+                  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                </div>
+                
+                <div id="section2" class="container-fluid bg-warning" style="padding:100px 20px;">
+                  <h1>Section 2</h1>
+                  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                </div>
+                
+                <div id="section3" class="container-fluid bg-secondary text-white" style="padding:100px 20px;">
+                  <h1>Section 3</h1>
+                  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+                </div>
+                
+                </body>
+
+                OFFCANVAS: <br>
+                ekranda normal şartlarda gözükmeyen bir menu oluşturmada kullanışlıdır:
+                <div class="offcanvas offcanvas-start" id="demo"> 
+                    <div class="offcanvas-header">
+                      <h1 class="offcanvas-title">Heading</h1>
+                      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <p>Some text lorem ipsum.</p>
+                      <p>Some text lorem ipsum.</p>
+                      <button class="btn btn-secondary" type="button">A Button</button>
+                    </div>
+                  </div>
+                  
+                  <!-- Button to open the offcanvas sidebar -->
+                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+                    Open Offcanvas Sidebar
+                  </button>
+                    <br>
+                    sağda açılan menü:
+                  <div class="offcanvas offcanvas-end" id="demo1">
+                    <div class="offcanvas-header">
+                        <h1 class="offcanvas-title">Heading</h1>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                        <p>Some text lorem ipsum.</p>
+                        <p>Some text lorem ipsum.</p>
+                        <button class="btn btn-secondary" type="button">A Button</button>
+                      </div>
+                  </div>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo1">
+                    Open Offcanvas Sidebar
+                  </button><br>
+                  yukarda açılan menü:
+                  <div class="offcanvas offcanvas-top" id="demo2">
+                    <div class="offcanvas-header">
+                        <h1 class="offcanvas-title">Heading</h1>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                        <p>Some text lorem ipsum.</p>
+                        <p>Some text lorem ipsum.</p>
+                        <button class="btn btn-secondary" type="button">A Button</button>
+                      </div>
+                  </div>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo2">
+                    Open Offcanvas Sidebar
+                  </button><br>
+                  aşağıda açılan menü:
+                  <div class="offcanvas offcanvas-bottom" id="demo3">
+                    <div class="offcanvas-header">
+                        <h1 class="offcanvas-title">Heading</h1>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+                      </div>
+                      <div class="offcanvas-body">
+                        <p>Some text lorem ipsum.</p>
+                        <p>Some text lorem ipsum.</p>
+                        <button class="btn btn-secondary" type="button">A Button</button>
+                      </div>
+                  </div>
+                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo3">
+                    Open Offcanvas Sidebar
+                  </button><br>
+
+
+                  ARAÇLAR / Utilities:
+                  <br>
+                  Borders / Çerçeveler:
+                  <br>
+                  tam çerçeve:
+                  <span class="border">*</span><br>
+                  çerçevesiz:
+                  <span class="border border-0">*</span><br>
+                  üstünde çerçeve yok:
+                  <span class="border border-top-0">*</span><br>
+                  sağında çerçeve yok:
+                  <span class="border border-end-0">*</span><br>
+                  altında çerçeve yok:
+                  <span class="border border-bottom-0">*</span><br>
+                  solunda çerçeve yok:
+                  <span class="border border-start-0">*</span><br>
+                  
+                  üstünde çerçeve var:
+                  <span class="border-top">*</span><br>
+                  sağında çerçeve var:
+                  <span class="border-end">*</span><br>
+                  altında çerçeve var:
+                  <span class="border-bottom">*</span><br>
+                  solunda çerçeve var:
+                  <span class="border-start">*</span><br>
+                  Border width / Çerçeve kalınlığı:
+                  1 den 5 e doğru kalınlışyor
+
+                  <span class="border-1">O</span>
+                  <span class="border-5">O</span><br>
+                  Çerçeve renkleri:
+                  <span class="border border-primary">O</span>
+                <span class="border border-secondary">O</span>
+                <span class="border border-success">O</span>
+                <span class="border border-danger">O</span>
+                <span class="border border-warning">O</span>
+                <span class="border border-info">O</span>
+                <span class="border border-light">O</span>
+                <span class="border border-dark">O</span>
+                <span class="border border-white">O</span><br>
+                şekilli çerçeveler: 
+                <span class="rounded">o</span>
+                <span class="rounded-top">o</span>
+                <span class="rounded-end">o</span>
+                <span class="rounded-bottom">o</span>
+                <span class="rounded-start">o</span>
+                <span class="rounded-circle">o</span>
+                <span class="rounded-pill" style="width:130px">o</span>
+                <span class="rounded-0">o</span>
+                <span class="rounded-1">o</span>
+                <span class="rounded-2">o</span>
+                <span class="rounded-3">o</span><br>
+                sağ sola yerleştirme:
+                <div class="clearfix">
+                    <span class="float-start">Float left</span>
+                    <span class="float-end">Float right</span>
+                  </div><br>
+                  Responsive Floats:
+                  <div class="float-sm-end">Float right on small screens or wider</div><br>
+                <div class="float-md-end">Float right on medium screens or wider</div><br>
+                <div class="float-lg-end">Float right on large screens or wider</div><br>
+                <div class="float-xl-end">Float right on extra large screens or wider</div><br>
+                <div class="float-xxl-end">Float right on XXL screens or wider</div><br>
+                <div class="float-none">Float none</div><br>
+                ekranın ortasına bir içerik yerleştirme:
+                <div class="mx-auto bg-warning" style="width:150px">ortaya hizalandı</div><br>
+
+                Width / Genişlik:
+                .w-25, .w-50, .w-75, .w-100, .mw-auto, .mw-100 <br>
+                <div class="w-25 bg-warning">Width 25%</div>
+                <div class="w-50 bg-warning">Width 50%</div>
+                <div class="w-75 bg-warning">Width 75%</div>
+                <div class="w-100 bg-warning">Width 100%</div>
+                <div class="w-auto bg-warning">Auto Width</div>
+                <div class="mw-100 bg-warning">Max Width 100%</div>
+
+                Height / Yükseklik:
+                .h-25, .h-50, .h-75, .h-100, .mh-auto, .mh-100 <br>
+                  <div style="height:200px;background-color:#ddd;">
+                    <div class="h-25 bg-warning">Height 25%</div>
+                    <div class="h-50 bg-warning">Height 50%</div>
+                    <div class="h-75 bg-warning">Height 75%</div>
+                    <!-- <div class="h-100 bg-warning">Height 100%</div>
+                    <div class="h-auto bg-warning">Auto Height</div>
+                    <div class="mh-100 bg-warning" style="height:500px">Max Height 100%</div> -->
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  <br>
+                  Spacing / Boşluklar: <br>
+                  Kırılma noktaları: xs (<=576px), sm (>=576px), md (>=768px), lg (>=992px), xl (>=1200px) or xxl (>=1400px))<br>
+                  özellikler: m - margin (kenar boşluğu), p - padding (dolgu malzemesi)<br>
+                  bölgeler: t - margin-top yada padding-top (üst bölge) ,b - margin-bottom yada padding-bottom (alt bölge), s -  margin-left yada padding-left (sol),  e -   margin-right yada padding-right (sağ) , x -  padding-left ve padding-right yada margin-left ve margin-right (sağ ve solu aynı anda) ,y -    padding-top ve padding-bottom yada margin-top ve margin-bottom (üst ve altı aynı anda) ,blank -   (boş bırakılırsa yapılacak işlemi 4 bir yanına uygular)<br>
+                  Boyutlar: 0 - 0 a margin veya padding ayarlar,  1 - .25rem e margin veya padding ayarlar,  2 - .5rem e margin veya padding ayarlar,  3 - 1rem e margin veya padding ayarlar,  4 - 1.5rem e margin veya padding ayarlar,  5 - 3rem e margin veya padding ayarlar,  auto -  margin otomatik olrak ayarlar<br>
+                  kırılma noktası xs in formatı: {Özellik}{Bölge}-{Boyut} <br>
+                  örn: .mt-3<div class="mt-3">aaaa</div>
+                  .mx-3 <div class="mx-3">aaa</div>
+                  diğer kırılma noktaları için:  {Özellik}{Bölge}-{kırılma noktası}-{Boyut}
+                  örn: .mt-xl-3 <div class="mt-xl-3">aaa</div><br>
+                  Shadows / Gölgeler:
+                  <div class="shadow-none p-4 mb-4 bg-light">No shadow</div>
+                <div class="shadow-sm p-4 mb-4 bg-white">Small shadow</div>
+                <div class="shadow p-4 mb-4 bg-white">Default shadow</div>
+                <div class="shadow-lg p-4 mb-4 bg-white">Large shadow</div>
+
+                Vertical Align / Dikey Hizlama:
+                <span class="align-baseline">merkez</span>
+                <span class="align-top">üst</span>
+                <span class="align-middle">orta</span>
+                <span class="align-bottom">alt</span>
+                <span class="align-text-top">yazının üstü</span>
+                <span class="align-text-bottom">yazının altı</span><br>
+
+
+                Aspect Ratio / Ekran Oranları:
+                <!-- Aspect ratio 1:1 -->
+                <div class="ratio ratio-1x1">
+                    <!-- <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
+                </div>
+                
+                <!-- Aspect ratio 4:3 -->
+                <div class="ratio ratio-4x3">
+                    <!-- <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
+                </div>
+                
+                <!-- Aspect ratio 16:9 -->
+                <div class="ratio ratio-16x9">
+                    <!-- <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
+                </div>
+                
+                <!-- Aspect ratio 21:9 -->
+                <div class="ratio ratio-21x9">
+                    <!-- <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe> -->
+                </div>
+
+                Visibility / Görünürlük: <br>
+
+                görünür:
+                <div class="visible">I am visible</div>
+                görünmez:
+                <div class="invisible">I am invisible</div>
+
+                Close icon / kapatma ikonu:
+                <button type="button" class="btn-close"></button> <br>
+
+                Screenreaders / Ekran okuyucuları: <br>
+                bir öğreyi bütün cihazlardan sadece ekran okuyucu görebilecek şekilde gizleme:
+                <span class="visually-hidden">I will be hidden on all screens except for screen readers.</span>
+
+                Flex: <br>
+                Flexbox / Esnek kutu:
+                <div class="d-flex p-3 bg-secondary text-white">
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                  </div>
+                kutuya göre esneklik:
+                <div class="d-inline-flex p-3 bg-secondary text-white">
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                  </div>
+                  Horizontal Direction / yatay yön:
+                  <div class="d-flex flex-row bg-secondary">
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                  </div>
+                  
+                  <div class="d-flex flex-row-reverse bg-secondary">
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                  </div>
+
+                  Vertical Direction / dikey yön:
+                  <div class="d-flex flex-column">
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                  </div>
+                  
+                  <div class="d-flex flex-column-reverse">
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                  </div>
+
+                  Justify Content / konumlandırılabilen içerik:
+                  <div class="d-flex justify-content-start bg-secondary mb-3">
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                  </div>
+                  <div class="d-flex justify-content-end bg-secondary mb-3">
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                  </div>
+                  <div class="d-flex justify-content-center bg-secondary mb-3">
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                  </div>
+                  <div class="d-flex justify-content-between bg-secondary mb-3">
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                  </div>
+                  <div class="d-flex justify-content-around bg-secondary mb-3">
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                  </div>
+                  Fill - Equal Widths / Doldur - Eşitle içeriği:
+                  <div class="d-flex">
+                    <div class="p-2 bg-info flex-fill">Flex item 1</div>
+                    <div class="p-2 bg-warning flex-fill">Flex item 2</div>
+                    <div class="p-2 bg-primary flex-fill">Flex item 3</div>
+                  </div>
+                  Grow / Büyü:
+                  <br>seçilen içerik kutuyu tamamen dolduracak:
+                  <div class="d-flex">
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary flex-grow-1">Flex item 3</div>
+                  </div>
+                  Order / Emir:
+                  <br>verilen emire göre hangi içerik başta veya sonra kalacak onu belirliyor:
+                  <div class="d-flex bg-secondary">
+                    <div class="p-2 bg-info order-3">Flex item 1</div>
+                    <div class="p-2 bg-warning order-2">Flex item 2</div>
+                    <div class="p-2 bg-primary order-1">Flex item 3</div>
+                  </div>
+                  Auto Margins / Otomatik kenar boşlukları:
+                  <div class="d-flex bg-secondary">
+                    <div class="p-2 ms-auto bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 bg-primary">Flex item 3</div>
+                  </div>
+                  
+                  <div class="d-flex bg-secondary">
+                    <div class="p-2 bg-info">Flex item 1</div>
+                    <div class="p-2 bg-warning">Flex item 2</div>
+                    <div class="p-2 me-auto bg-primary">Flex item 3</div>
+                  </div>
+                  Wrap / Sarılmış:
+                  <p><code>.flex-wrap:</code></p>
+                  <div class="d-flex flex-wrap bg-light">
+                    <div class="p-2 border">Flex item 1</div>
+                    <div class="p-2 border">Flex item 2</div>
+                    <div class="p-2 border">Flex item 3</div>
+                    <div class="p-2 border">Flex item 4</div>
+                    <div class="p-2 border">Flex item 5</div>
+                    <div class="p-2 border">Flex item 6</div>
+                    <div class="p-2 border">Flex item 7</div>
+                    <div class="p-2 border">Flex item 8</div>
+                    <div class="p-2 border">Flex item 9</div>
+                    <div class="p-2 border">Flex item 10</div>
+                    <div class="p-2 border">Flex item 11</div>
+                    <div class="p-2 border">Flex item 12</div>
+                    <div class="p-2 border">Flex item 13 </div>
+                    <div class="p-2 border">Flex item 14</div>
+                    <div class="p-2 border">Flex item 15</div>
+                    <div class="p-2 border">Flex item 16</div>
+                    <div class="p-2 border">Flex item 17</div>
+                    <div class="p-2 border">Flex item 18</div>
+                    <div class="p-2 border">Flex item 19</div>
+                    <div class="p-2 border">Flex item 20</div>
+                    <div class="p-2 border">Flex item 21</div>
+                    <div class="p-2 border">Flex item 22</div>
+                    <div class="p-2 border">Flex item 23</div>
+                    <div class="p-2 border">Flex item 24</div>
+                    <div class="p-2 border">Flex item 25</div>
+                  </div>
+                  <br>
+                  <p><code>.flex-wrap-reverse:</code></p>
+                  <div class="d-flex flex-wrap-reverse bg-light">
+                    <div class="p-2 border">Flex item 1</div>
+                    <div class="p-2 border">Flex item 2</div>
+                    <div class="p-2 border">Flex item 3</div>
+                    <div class="p-2 border">Flex item 4</div>
+                    <div class="p-2 border">Flex item 5</div>
+                    <div class="p-2 border">Flex item 6</div>
+                    <div class="p-2 border">Flex item 7</div>
+                    <div class="p-2 border">Flex item 8</div>
+                    <div class="p-2 border">Flex item 9</div>
+                    <div class="p-2 border">Flex item 10</div>
+                    <div class="p-2 border">Flex item 11</div>
+                    <div class="p-2 border">Flex item 12</div>
+                    <div class="p-2 border">Flex item 13 </div>
+                    <div class="p-2 border">Flex item 14</div>
+                    <div class="p-2 border">Flex item 15</div>
+                    <div class="p-2 border">Flex item 16</div>
+                    <div class="p-2 border">Flex item 17</div>
+                    <div class="p-2 border">Flex item 18</div>
+                    <div class="p-2 border">Flex item 19</div>
+                    <div class="p-2 border">Flex item 20</div>
+                    <div class="p-2 border">Flex item 21</div>
+                    <div class="p-2 border">Flex item 22</div>
+                    <div class="p-2 border">Flex item 23</div>
+                    <div class="p-2 border">Flex item 24</div>
+                    <div class="p-2 border">Flex item 25</div>
+                  </div>
+                  <br>
+                  <p><code>.flex-nowrap:</code></p>
+                  <div class="d-flex flex-nowrap bg-light">
+                    <div class="p-2 border">Flex item 1</div>
+                    <div class="p-2 border">Flex item 2</div>
+                    <div class="p-2 border">Flex item 3</div>
+                    <div class="p-2 border">Flex item 4</div>
+                    <div class="p-2 border">Flex item 5</div>
+                    <div class="p-2 border">Flex item 6</div>
+                    <div class="p-2 border">Flex item 7</div>
+                    <div class="p-2 border">Flex item 8</div>
+                    <div class="p-2 border">Flex item 9</div>
+                    <div class="p-2 border">Flex item 10</div>
+                    <div class="p-2 border">Flex item 11</div>
+                    <div class="p-2 border">Flex item 12</div>
+                    <div class="p-2 border">Flex item 13 </div>
+                    <div class="p-2 border">Flex item 14</div>
+                    <div class="p-2 border">Flex item 15</div>
+                    <div class="p-2 border">Flex item 16</div>
+                    <div class="p-2 border">Flex item 17</div>
+                    <div class="p-2 border">Flex item 18</div>
+                    <div class="p-2 border">Flex item 19</div>
+                    <div class="p-2 border">Flex item 20</div>
+                    <div class="p-2 border">Flex item 21</div>
+                    <div class="p-2 border">Flex item 22</div>
+                    <div class="p-2 border">Flex item 23</div>
+                    <div class="p-2 border">Flex item 24</div>
+                    <div class="p-2 border">Flex item 25</div>
+                    <div class="p-2 border">Flex item 26</div>
+                    <div class="p-2 border">Flex item 27</div>
+                    <div class="p-2 border">Flex item 28</div>
+                    <div class="p-2 border">Flex item 29</div>
+                    <div class="p-2 border">Flex item 30</div>
+                    <div class="p-2 border">Flex item 31</div>
+                    <div class="p-2 border">Flex item 32</div>
+                    <div class="p-2 border">Flex item 33</div>
+                    <div class="p-2 border">Flex item 34</div>
+                    <div class="p-2 border">Flex item 35</div>
+                  </div>
+                  <br>
+                  Align Content / Hizalanmış İçerik:
+                  <p>.align-content-start (default):</p>
+                <div class="d-flex flex-wrap align-content-start bg-light" style="height:300px">
+                    <div class="p-2 border">Flex item 1</div>
+                    <div class="p-2 border">Flex item 2</div>
+                    <div class="p-2 border">Flex item 3</div>
+                    <div class="p-2 border">Flex item 4</div>
+                    <div class="p-2 border">Flex item 5</div>
+                    <div class="p-2 border">Flex item 6</div>
+                    <div class="p-2 border">Flex item 7</div>
+                    <div class="p-2 border">Flex item 8</div>
+                    <div class="p-2 border">Flex item 9</div>
+                    <div class="p-2 border">Flex item 10</div>
+                    <div class="p-2 border">Flex item 11</div>
+                    <div class="p-2 border">Flex item 12</div>
+                    <div class="p-2 border">Flex item 13 </div>
+                    <div class="p-2 border">Flex item 14</div>
+                    <div class="p-2 border">Flex item 15</div>
+                    <div class="p-2 border">Flex item 16</div>
+                    <div class="p-2 border">Flex item 17</div>
+                    <div class="p-2 border">Flex item 18</div>
+                    <div class="p-2 border">Flex item 19</div>
+                    <div class="p-2 border">Flex item 20</div>
+                    <div class="p-2 border">Flex item 21</div>
+                    <div class="p-2 border">Flex item 22</div>
+                    <div class="p-2 border">Flex item 23</div>
+                    <div class="p-2 border">Flex item 24</div>
+                    <div class="p-2 border">Flex item 25</div>
+                </div>
+                <br>
+                <p>.align-content-end:</p>
+                <div class="d-flex flex-wrap align-content-end bg-light" style="height:300px">
+                    <div class="p-2 border">Flex item 1</div>
+                    <div class="p-2 border">Flex item 2</div>
+                    <div class="p-2 border">Flex item 3</div>
+                    <div class="p-2 border">Flex item 4</div>
+                    <div class="p-2 border">Flex item 5</div>
+                    <div class="p-2 border">Flex item 6</div>
+                    <div class="p-2 border">Flex item 7</div>
+                    <div class="p-2 border">Flex item 8</div>
+                    <div class="p-2 border">Flex item 9</div>
+                    <div class="p-2 border">Flex item 10</div>
+                    <div class="p-2 border">Flex item 11</div>
+                    <div class="p-2 border">Flex item 12</div>
+                    <div class="p-2 border">Flex item 13 </div>
+                    <div class="p-2 border">Flex item 14</div>
+                    <div class="p-2 border">Flex item 15</div>
+                    <div class="p-2 border">Flex item 16</div>
+                    <div class="p-2 border">Flex item 17</div>
+                    <div class="p-2 border">Flex item 18</div>
+                    <div class="p-2 border">Flex item 19</div>
+                    <div class="p-2 border">Flex item 20</div>
+                    <div class="p-2 border">Flex item 21</div>
+                    <div class="p-2 border">Flex item 22</div>
+                    <div class="p-2 border">Flex item 23</div>
+                    <div class="p-2 border">Flex item 24</div>
+                    <div class="p-2 border">Flex item 25</div>
+                </div>
+                <br>
+                <p>.align-content-center:</p>
+                <div class="d-flex flex-wrap align-content-center bg-light" style="height:300px">
+                    <div class="p-2 border">Flex item 1</div>
+                    <div class="p-2 border">Flex item 2</div>
+                    <div class="p-2 border">Flex item 3</div>
+                    <div class="p-2 border">Flex item 4</div>
+                    <div class="p-2 border">Flex item 5</div>
+                    <div class="p-2 border">Flex item 6</div>
+                    <div class="p-2 border">Flex item 7</div>
+                    <div class="p-2 border">Flex item 8</div>
+                    <div class="p-2 border">Flex item 9</div>
+                    <div class="p-2 border">Flex item 10</div>
+                    <div class="p-2 border">Flex item 11</div>
+                    <div class="p-2 border">Flex item 12</div>
+                    <div class="p-2 border">Flex item 13 </div>
+                    <div class="p-2 border">Flex item 14</div>
+                    <div class="p-2 border">Flex item 15</div>
+                    <div class="p-2 border">Flex item 16</div>
+                    <div class="p-2 border">Flex item 17</div>
+                    <div class="p-2 border">Flex item 18</div>
+                    <div class="p-2 border">Flex item 19</div>
+                    <div class="p-2 border">Flex item 20</div>
+                    <div class="p-2 border">Flex item 21</div>
+                    <div class="p-2 border">Flex item 22</div>
+                    <div class="p-2 border">Flex item 23</div>
+                    <div class="p-2 border">Flex item 24</div>
+                    <div class="p-2 border">Flex item 25</div>
+                </div>
+                <br>
+                <p>.align-content-around:</p>
+                <div class="d-flex flex-wrap align-content-around bg-light" style="height:300px">
+                    <div class="p-2 border">Flex item 1</div>
+                    <div class="p-2 border">Flex item 2</div>
+                    <div class="p-2 border">Flex item 3</div>
+                    <div class="p-2 border">Flex item 4</div>
+                    <div class="p-2 border">Flex item 5</div>
+                    <div class="p-2 border">Flex item 6</div>
+                    <div class="p-2 border">Flex item 7</div>
+                    <div class="p-2 border">Flex item 8</div>
+                    <div class="p-2 border">Flex item 9</div>
+                    <div class="p-2 border">Flex item 10</div>
+                    <div class="p-2 border">Flex item 11</div>
+                    <div class="p-2 border">Flex item 12</div>
+                    <div class="p-2 border">Flex item 13 </div>
+                    <div class="p-2 border">Flex item 14</div>
+                    <div class="p-2 border">Flex item 15</div>
+                    <div class="p-2 border">Flex item 16</div>
+                    <div class="p-2 border">Flex item 17</div>
+                    <div class="p-2 border">Flex item 18</div>
+                    <div class="p-2 border">Flex item 19</div>
+                    <div class="p-2 border">Flex item 20</div>
+                    <div class="p-2 border">Flex item 21</div>
+                    <div class="p-2 border">Flex item 22</div>
+                    <div class="p-2 border">Flex item 23</div>
+                    <div class="p-2 border">Flex item 24</div>
+                    <div class="p-2 border">Flex item 25</div>
+                </div>
+                <br>
+                <p>.align-content-stretch:</p>
+                <div class="d-flex flex-wrap align-content-stretch bg-light" style="height:300px">
+                    <div class="p-2 border">Flex item 1</div>
+                    <div class="p-2 border">Flex item 2</div>
+                    <div class="p-2 border">Flex item 3</div>
+                    <div class="p-2 border">Flex item 4</div>
+                    <div class="p-2 border">Flex item 5</div>
+                    <div class="p-2 border">Flex item 6</div>
+                    <div class="p-2 border">Flex item 7</div>
+                    <div class="p-2 border">Flex item 8</div>
+                    <div class="p-2 border">Flex item 9</div>
+                    <div class="p-2 border">Flex item 10</div>
+                    <div class="p-2 border">Flex item 11</div>
+                    <div class="p-2 border">Flex item 12</div>
+                    <div class="p-2 border">Flex item 13 </div>
+                    <div class="p-2 border">Flex item 14</div>
+                    <div class="p-2 border">Flex item 15</div>
+                    <div class="p-2 border">Flex item 16</div>
+                    <div class="p-2 border">Flex item 17</div>
+                    <div class="p-2 border">Flex item 18</div>
+                    <div class="p-2 border">Flex item 19</div>
+                    <div class="p-2 border">Flex item 20</div>
+                    <div class="p-2 border">Flex item 21</div>
+                    <div class="p-2 border">Flex item 22</div>
+                    <div class="p-2 border">Flex item 23</div>
+                    <div class="p-2 border">Flex item 24</div>
+                    <div class="p-2 border">Flex item 25</div>
+                </div>
+                <br>
+                    Hizalanmış itemler / Align Item:
+                    <p>.align-items-start:</p>
+                    <div class="d-flex align-items-start bg-light" style="height:150px">
+                        <div class="p-2 border">Flex item 1</div>
+                        <div class="p-2 border">Flex item 2</div>
+                        <div class="p-2 border">Flex item 3</div>
+                    </div>
+                    <br>
+                    <p>.align-items-end:</p>
+                    <div class="d-flex align-items-end bg-light" style="height:150px">
+                        <div class="p-2 border">Flex item 1</div>
+                        <div class="p-2 border">Flex item 2</div>
+                        <div class="p-2 border">Flex item 3</div>
+                    </div>
+                    <br>
+                    <p>.align-items-center:</p>
+                    <div class="d-flex align-items-center bg-light" style="height:150px">
+                        <div class="p-2 border">Flex item 1</div>
+                        <div class="p-2 border">Flex item 2</div>
+                        <div class="p-2 border">Flex item 3</div>
+                    </div>
+                    <br>
+                    <p>.align-items-baseline:</p>
+                    <div class="d-flex align-items-baseline bg-light" style="height:150px">
+                        <div class="p-2 border">Flex item 1</div>
+                        <div class="p-2 border">Flex item 2</div>
+                        <div class="p-2 border">Flex item 3</div>
+                    </div>
+                    <br>
+                    <p>.align-items-stretch (default):</p>
+                    <div class="d-flex align-items-stretch bg-light" style="height:150px">
+                        <div class="p-2 border">Flex item 1</div>
+                        <div class="p-2 border">Flex item 2</div>
+                        <div class="p-2 border">Flex item 3</div>
+                    </div>
+                    <br>
+                    Align Self / Kendini Hizalama:
+                    <p>.align-self-start:</p>
+                    <div class="d-flex bg-light" style="height:150px">
+                        <div class="p-2 border">Flex item 1</div>
+                        <div class="p-2 border align-self-start">Flex item 2</div>
+                        <div class="p-2 border">Flex item 3</div>
+                    </div>
+                    <br>
+                    <p>.align-self-end:</p>
+                    <div class="d-flex bg-light" style="height:150px">
+                        <div class="p-2 border">Flex item 1</div>
+                        <div class="p-2 border align-self-end">Flex item 2</div>
+                        <div class="p-2 border">Flex item 3</div>
+                    </div>
+                    <br>
+                    <p>.align-self-center:</p>
+                    <div class="d-flex bg-light" style="height:150px">
+                        <div class="p-2 border">Flex item 1</div>
+                        <div class="p-2 border align-self-center">Flex item 2</div>
+                        <div class="p-2 border">Flex item 3</div>
+                    </div>
+                    <br>
+                    <p>.align-self-baseline:</p>
+                    <div class="d-flex bg-light" style="height:150px">
+                        <div class="p-2 border">Flex item 1</div>
+                        <div class="p-2 border align-self-baseline">Flex item 2</div>
+                        <div class="p-2 border">Flex item 3</div>
+                    </div>
+                    <br>
+                    <p>.align-self-stretch (default):</p>
+                    <div class="d-flex bg-light" style="height:150px">
+                        <div class="p-2 border">Flex item 1</div>
+                        <div class="p-2 border align-self-stretch">Flex item 2</div>
+                        <div class="p-2 border">Flex item 3</div>
+                    </div>
+                    <br>
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </body>
+        <script>
+            document.getElementById("toastbtn").onclick = function() {
+              var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+              var toastList = toastElList.map(function(toastEl) {
+                return new bootstrap.Toast(toastEl)
+              })
+              toastList.forEach(toast => toast.show())
+            }
+            </script>
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+    </script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl)
+        })
+        </script>
+
+</html>

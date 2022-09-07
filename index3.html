@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <title>bootstrap 5 Forms</title>
+</head>
+<body>
+    Stacked Form / Yığılmış Form:
+    <form action="/action_page.php">
+        <div class="mb-3 mt-3">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+        </div>
+        <div class="mb-3">
+          <label for="pwd" class="form-label">Password:</label>
+          <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+        </div>
+        <div class="form-check mb-3">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="remember"> Remember me
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      Textarea / Yazı Alanı:
+      <form action="/action_page.php">
+        <div class="mb-3 mt-3">
+          <label for="comment">Comments:</label>
+          <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      Form Row/Grid (Inline Forms) / Satıriçi Forumlar.
+      <form>
+        <div class="row">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Enter email" name="email">
+          </div>
+          <div class="col">
+            <input type="password" class="form-control" placeholder="Enter password" name="pswd">
+          </div>
+        </div>
+      </form>
+      Form Control Size / Forum kontrol Büyüklüğü:
+      <form>
+        <input type="text" class="form-control form-control-lg" placeholder="Large input">
+        <input type="text" class="form-control mt-3" placeholder="Normal input">
+        <input type="text" class="form-control form-control-sm mt-3" placeholder="Small input">
+      </form>
+      Disabled and Readonly / Etkin olmayan ve sadece okunan:
+      <form>
+        <input type="text" class="form-control" placeholder="Normal input">
+        <input type="text" class="form-control mt-3" placeholder="Disabled input" disabled>
+        <input type="text" class="form-control mt-3" placeholder="Readonly input" readonly>
+      </form>
+      Plaintext input / Düz metin girişi:
+      <form>
+        <input type="text" class="form-control-plaintext" placeholder="Plaintext input">
+        <input type="text" class="form-control mt-3" placeholder="Normal input">
+      </form>
+      Color Picker / Renk Seçici:
+      <form>
+        <label for="myColor" class="form-label">Color picker</label>
+        <input type="color" class="form-control form-control-color" id="myColor" value="#CCCCCC" title="Choose a color">
+      </form>
+      SELECT: <br>
+      Select Menu / Seçim Menüsü:
+      <form action="/action_page.php">
+        <label for="sel1" class="form-label">Select list (select one):</label>
+        <select class="form-select" id="sel1" name="sellist1">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+        <br>
+        
+        <label for="sel2" class="form-label">Mutiple select list (hold shift to select more than one):</label>
+        <select multiple class="form-select" id="sel2" name="sellist2">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+      Menu Sizes / Menü Büyüklükleri:
+      <form>
+        <select class="form-select form-select-lg">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+        
+        <select class="form-select mt-3">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+        
+        <select class="form-select form-select-sm mt-3">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+       </form>  
+       Disabled Select Menu / Seçime Kapalı Menü:
+       <form>
+        <select class="form-select" disabled>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+       </form> 
+       Data Lists / Veri Listesi:
+       <form action="/action_page.php">
+        <label for="browser" class="form-label">Choose your browser from the list:</label>
+        <input class="form-control" list="browsers" name="browser" id="browser">
+        <datalist id="browsers">
+          <option value="Edge">
+          <option value="Firefox">
+          <option value="Chrome">
+          <option value="Opera">
+          <option value="Safari">
+        </datalist>    
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+      Checkboxes and Radio buttons / Onay Kutuları ve Radyo butonlar: <br>
+      Checkboxes / Onay kutuları:
+      <form action="/action_page.php">
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
+          <label class="form-check-label" for="check1">Option 1</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+          <label class="form-check-label" for="check2">Option 2</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" class="form-check-input" disabled>
+          <label class="form-check-label">Option 3</label>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+      Radio buttons / Radyo Düğmeleri:
+      <form action="/action_page.php">
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>
+          <label class="form-check-label" for="radio1">Option 1</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
+          <label class="form-check-label" for="radio2">Option 2</label>
+        </div>
+        <div class="form-check">
+          <input type="radio" class="form-check-input" disabled>
+          <label class="form-check-label">Option 3</label>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+      Toggle Switches / Geçiş Anahtarları:
+      <form action="/action_page.php">
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+          <label class="form-check-label" for="mySwitch">Dark Mode</label>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+      Range / Menzil: <br>
+      Custom Range / Özel Aralık:
+      <form action="/action_page.php">
+        <label for="customRange" class="form-label">Custom range</label>
+        <input type="range" class="form-range" id="customRange" name="points">
+        
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+      Steps / Adımlar:
+      <form action="/action_page.php">
+        <label for="customRange" class="form-label">Custom range</label>
+        <input type="range" class="form-range" id="customRange" step="10" name="points">
+        
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+      Min and Max / En az ve en fazla:
+      <form action="/action_page.php">
+        <label for="customRange" class="form-label">Custom range</label>
+        <input type="range" class="form-range" id="customRange" name="points" min="2" max="4">
+        
+        <button type="submit" class="btn btn-primary mt-3">Submit</button>
+      </form>
+      Input Groups / Girş Grupları:
+      <form action="/action_page.php">
+        <div class="input-group mb-3">
+          <span class="input-group-text">@</span>
+          <input type="text" class="form-control" placeholder="Username" name="usrname">
+        </div>
+    
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Your Email" name="email">
+          <span class="input-group-text">@example.com</span>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      Input Group Size / Giriş Grup Büyüklükleri:
+      <div class="input-group input-group-sm mb-3">
+        <span class="input-group-text">Small</span>
+        <input type="text" class="form-control">
+      </div>
+      <div class="input-group mb-3">
+        <span class="input-group-text">Default</span>
+        <input type="text" class="form-control">
+      </div>
+      <div class="input-group input-group-lg mb-3">
+        <span class="input-group-text">Large</span>
+        <input type="text" class="form-control">
+      </div>
+      Multiple Inputs and Helpers / Çoklu Giriş ve Yardımcılar:
+      <!-- Multiple inputs -->
+    <div class="input-group mb-3">
+        <span class="input-group-text">Person</span>
+        <input type="text" class="form-control" placeholder="First Name">
+        <input type="text" class="form-control" placeholder="Last Name">
+    </div>
+
+    <!-- Multiple addons / help text -->
+    <div class="input-group mb-3">
+        <span class="input-group-text">One</span>
+        <span class="input-group-text">Two</span>
+        <span class="input-group-text">Three</span>
+        <input type="text" class="form-control">
+    </div>
+    Input Group with Checkboxes and Radios / Onay kutusu ve radyo düğmesi ile Giriş grupları 
+    <div class="input-group mb-3">
+        <div class="input-group-text">
+          <input type="checkbox">
+        </div>
+        <input type="text" class="form-control" placeholder="Some text">
+      </div>
+      
+      <div class="input-group mb-3">
+        <div class="input-group-text">
+          <input type="radio">
+        </div>
+        <input type="text" class="form-control" placeholder="Some text">
+      </div>
+      Input Group Buttons / Düğmeli giriş grupları:
+      <div class="input-group mb-3">
+        <button class="btn btn-outline-primary" type="button">Basic Button</button>
+        <input type="text" class="form-control" placeholder="Some text">
+      </div>
+      
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search">
+        <button class="btn btn-success" type="submit">Go</button>
+      </div>
+      
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Something clever..">
+        <button class="btn btn-primary" type="button">OK</button>
+        <button class="btn btn-danger" type="button">Cancel</button>
+      </div>
+      Input Group with Dropdown Button / aşağı dıoğru açılır menülü Giriş grubu:
+      <div class="input-group mt-3 mb-3">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Link 1</a></li>
+          <li><a class="dropdown-item" href="#">Link 2</a></li>
+          <li><a class="dropdown-item" href="#">Link 3</a></li>
+        </ul>
+        <input type="text" class="form-control" placeholder="Username">
+      </div>
+      Form Floating Labels / Kayan forum etiketleri:
+      <form action="/action_page.php">
+        <div class="form-floating mb-3 mt-3">
+          <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+          <label for="email">Email</label>
+        </div>
+        <div class="form-floating mt-3 mb-3">
+          <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+          <label for="pwd">Password</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      Textarea / bıldığında kayan yazı alanı oluşturma:
+      <form action="/action_page.php">
+        <div class="form-floating mb-3 mt-3">
+          <textarea class="form-control" id="comment" name="text" placeholder="Comment goes here"></textarea>
+          <label for="comment">Comments</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      Select Menus / Seçim menüsü:
+      <form action="/action_page.php">
+        <div class="form-floating mb-3 mt-3">
+          <select class="form-select" id="sel1" name="sellist">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+          <label for="sel1" class="form-label">Select list (select one):</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      Form Validation / Forum doğrulama:
+      <form action="/action_page.php" class="was-validated">
+        <div class="mb-3 mt-3">
+          <label for="uname" class="form-label">Username:</label>
+          <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="mb-3">
+          <label for="pwd" class="form-label">Password:</label>
+          <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Please fill out this field.</div>
+        </div>
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="myCheck"  name="remember" required>
+          <label class="form-check-label" for="myCheck">I agree on blabla.</label>
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Check this checkbox to continue.</div>
+        </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+
+
+
+
+
+</body>
+</html>
